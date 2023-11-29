@@ -36,12 +36,13 @@ class EditActivity : AppCompatActivity() {
                 updateStudent(updateStudent)
                 //diperbarui dengan nilai baru dari objek student
                 updateId = ""
+                finish()
             }
         }
     }
 
     private fun updateStudent(student : Student) {
-        MainActivity.studentCollectionRef.document(updateId).set(student)
+        MainActivity.studentCollectionRef.document(student.id.toString()).set(student)
            .addOnFailureListener {
                Log.d("MainActivity", "Error updating student : ", it)
 

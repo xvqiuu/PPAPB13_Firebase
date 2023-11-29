@@ -8,11 +8,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentfirebase.databinding.ItemStudentBinding
 
-typealias onClickUpdate = (Student) -> Unit
 typealias onClickDelete = (Student) -> Unit
 
 class StudentAdapter(private val listStudents: List<Student>,
-                     private val onClickUpdate : onClickUpdate,
                      private val onClickDelete: onClickDelete):
     RecyclerView.Adapter<StudentAdapter.ItemStudentViewHolder>() {
 
@@ -44,7 +42,18 @@ class StudentAdapter(private val listStudents: List<Student>,
                 }
                 //menetapkan fungsi onClick untuk item dan tombol edit dan delete
                 edit.setOnClickListener {
-                    onClickUpdate(data)
+                    val intent = Intent(binding.root.context, EditActivity::class.java)
+                        .apply {
+                            putExtra("id", data.id)
+                            putExtra("nama", data.nama)
+                            putExtra("jurusan", data.jurusan)
+                            putExtra("semester", data.semester)
+                            putExtra("asal", data.asal)
+                            putExtra("nim", data.nim)
+                        }
+
+                    binding.root.context.startActivity(intent)
+
                 }
 
                 delete.setOnClickListener {

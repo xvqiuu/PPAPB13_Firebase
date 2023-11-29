@@ -80,9 +80,7 @@ class MainActivity : AppCompatActivity() {
         studentListLiveData.observe(this) {
                 students ->
             val studentAdapter = StudentAdapter(students, {
-                val intent = Intent(this@MainActivity, EditActivity::class.java)
-                startActivity(intent)
-            }, { student ->
+                student ->
                 deleteStudent(student)
             })
             binding.rvStudents.adapter = studentAdapter
