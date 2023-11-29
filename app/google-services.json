@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "916275714123",
+    "project_id": "studentfirebase-d6cab",
+    "storage_bucket": "studentfirebase-d6cab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916275714123:android:1957ae154ab130e77a15ce",
+        "android_client_info": {
+          "package_name": "com.example.studentfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXiQbI-vQIGn66T3ZmkTcPap4_woNB9P8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
