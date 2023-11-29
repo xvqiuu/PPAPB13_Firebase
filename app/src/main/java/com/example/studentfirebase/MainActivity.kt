@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     private fun deleteStudent(student : Student) {
         studentCollectionRef.document(student.id.toString()).delete()
             .addOnFailureListener {
-                Log.d("MainActivity", "Error deleting budget : ", it)
+                Log.d("MainActivity", "Error deleting student : ", it)
             }
     }
 
